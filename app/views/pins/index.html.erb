@@ -1,0 +1,11 @@
+<h1>Listing pins</h1>
+<h2>Description</h2>
+<% @pins.each do |pin| %>
+  <p>
+    <%= pin.description %> 
+    <%= link_to("show",   pin_path(pin)) %>
+    <%= link_to("Edit",   edit_pin_path(pin)) %>
+    <%= link_to('Delete', pin, method: :delete, data: {confirm: "Are you sure?"}) %>
+  </p> 
+<% end %>
+<%= link_to("New Pin", new_pin_path) %>

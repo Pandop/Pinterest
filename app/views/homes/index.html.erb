@@ -1,12 +1,12 @@
 <div class="jumbotron center">
   <h1>Welcome to My Pinterested App!</h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore a fugiat recusandae quas nam provident, officia cumque autem voluptatibus quis modi iusto similique.
-  </p>
+  <p>Pretty cool, don't you think?</p>
 
   <% if user_signed_in? %>
     <%= link_to("Log Out",  destroy_user_session_path, method: :delete, class: "btn btn-primary") %>
     <%= link_to("Edit Profile", edit_user_registration_path, class: "btn btn-default") %>
+    <%= link_to("List Pins", pins_path, class: "btn btn-default") %>
+
   <% else %>
     <%= link_to("Log In", new_user_session_path, class: "btn btn-default" ) %>
     <%= link_to("Join", new_user_registration_path, class: "btn btn-primary" ) %>
