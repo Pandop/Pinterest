@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  resources :pins 
+
   devise_for :users
-  root 'homes#index'
-  
-  get 'homes/index'
+  root 'pins#index'
   get 'homes/about'
+  
+  #get 'homes/index'
+ 
 
   #get 'pins/index'
   #get 'pins/show'
@@ -12,6 +15,6 @@ Rails.application.routes.draw do
   #get 'pins/edit'
   #get 'pins/update'
   #get 'pins/destroy'
-  resources :pins 
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

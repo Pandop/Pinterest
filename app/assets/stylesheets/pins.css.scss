@@ -1,0 +1,33 @@
+// Place all the styles related to the Pins controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#pins {
+    margin: 0 auto;
+}
+
+.box {
+    margin: 5px;
+    width: 214px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    font-weight: 400; //background: yellow;
+    .date {
+        letter-spacing: 1.0px;
+        font-size: 0.7em;
+        font-style: italic;
+        font-weight: 600;
+        color: rgb(20, 190, 196);
+    }
+    .footer-color {
+        color: rgb(20, 67, 196);
+    }
+}
+
+.box img {
+    width: 100%;
+}
+
+.body-text,
+.footer-text {
+    text-align: center;
+}

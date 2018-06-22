@@ -1,3 +1,25 @@
-<h1>Pin </h1>
-<p><%= @pin.description %></p>
-<p><%= link_to("Back to Listing", pins_path) %></p>
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading center"><br/></div>
+
+      <div class="panel-body body-text">
+        <%= image_tag(@pin.image.url) %><br />
+        <%= @pin.description %>           
+      </div>
+      <div class="panel-footer footer-text">
+        <%= link_to("Back", pins_path) %>  
+          <% if @pin.user == current_user %> |    
+            <%= link_to("Edit",   edit_pin_path(@pin)) %> | 
+            <%= link_to('Delete', @pin, method: :delete, data: {confirm: "Are you sure?"}) %>   
+          <% end %>
+       </div>
+    </div>
+  </div>
+</div>
+
+
+
+
