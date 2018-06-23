@@ -13,3 +13,13 @@ $(function() {
         });
     });
 }); */
+/* 
+$(function() {
+    $('#pins').masonry({
+        itemSelector: '.box',
+        columnWidth: 20,
+        isAnimated: !Modernizr.csstransitions,
+        isFitWidth: true
+    });
+
+}); */

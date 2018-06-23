@@ -6,6 +6,15 @@ $ ->
   $('#pins').imagesLoaded ->
     $('#pins').masonry
       itemSelector: '.box'
-      columnWidth: 20
+      columnWidth: 2
       isFitWidth: true 
+      isAnimated: true 
+      animationOptions: 
+        duration: 200
+        easing: 'swing'
+        queue: false
 
+#$('#pins').masonry('reloadItems').masonry
+
+  
+  #$('#pins').masonry('reloadItems')
